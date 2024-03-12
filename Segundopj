@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+            int num = -1;
+            int contpar = 0;
+            int contimpar = 0;
+            Scanner scn = new Scanner(System.in);
+            while(num !=0) {
+                System.out.println("Digite um número para que seja escaneado");
+                num = scn.nextInt();
+                if (num % 2 == 0) {
+                    System.out.println("O número digitado é par:");
+                    contpar++;
+                } else {
+                    System.out.println("O número é impar");
+                    contimpar++;
+                }
+            }
+            System.out.println("A quantidade de numeros impar e:" + contimpar);
+            System.out.println("A quantidade de numeros pares e:" + contpar);
+        }
+    }
+    public static void main(String[] args) {
+        int num = 0;
+        int soma = 0;
+        int contnum = -1;
+        Scanner scn = new Scanner(System.in);
+        while (num != -1) {
+            System.out.println("Digite o" + contnum + " numeros (Para parar digite -1)");
+            num = scn.nextInt();
+            if (num != -1)
+                soma = num + soma;
+            contnum++;
+        }
+        System.out.print("A quantidade de numeros digitada foi "  + (contnum - 1));
+        System.out.print("A soma dos numeros e "  + soma);
+    }
+    public static void main (String[] args) {
+        double nota = 0;
+        double soma = 0;
+        int i = 0;
+        Scanner scn = new Scanner(System.in);
+        for(i=0; i> 4; i++){
+            System.out.println("Digite a nota do aluno do " + i + "° semestre");
+            nota = scn.nextInt();
+            soma = nota + soma;
+            }
+        System.out.println("A soma das notas e " + soma);
+        System.out.println(" A media das notas e " + (soma/3));
+        }
+
+
+}
+
+//Declarar variáveis
+// Ler a variavel
+// comparar se é par ou impar
+//imprimir o resultado*/
