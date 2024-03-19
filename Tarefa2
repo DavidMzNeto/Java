@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main {
+    //Imprimir os numeros multiplos de 3 até 1000
+    public static void main(String[] args) {
+        //Exercicio1();
+        //Exercico2();
+        Exercicio3();
+    }
+
+    private static void Exercicio1() {
+        int num = 2;
+        int contnum = 0;
+        do{
+            if ((num % 3) == 0 && (num % 2) ==0) {
+                System.out.println("Esses é um número multiplo de 3: " + num);}
+            num ++;
+            contnum+=1;
+        } while (num <= 1000);
+        System.out.println(" A quantidade de números é: " + contnum);
+    }
+    private static void Exercico2(){
+    Scanner scn = new Scanner(System.in);
+        double soma = 0;
+
+        System.out.println(" Escreva 10 números para serem somados: ");
+        for(int i = 0; i <+10 ; i++){
+            System.out.println("Digite o número: \n");
+            int val = scn.nextInt();
+                soma += val;
+            }
+        System.out.println("A soma é: " + soma);
+        System.out.println("A média é " + soma/10);
+            }
+
+    private static void Exercicio3() {
+        double area = 0.0;
+        int numComodo = 1;
+        double areadaCasa = 0.0;
+        Scanner scn = new Scanner(System.in);
+        do {
+            System.out.println("Digite o comprimento do " + numComodo + " cômodo: ");
+            double comprimento = scn.nextDouble();
+            System.out.println("Digite a largura: ");
+            double largura = scn.nextDouble();
+            area = largura * comprimento;
+            numComodo++;
+            System.out.println("A área do comodo é: " + area);
+            areadaCasa = area + areadaCasa;
+        } while (numComodo <= 4);
+        System.out.println(" A área total da casa é: " + areadaCasa);
+    }
+}
+
+
+
+
+
