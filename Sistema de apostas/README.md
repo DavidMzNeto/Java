@@ -1,18 +1,34 @@
-## Getting Started
+Jogo Lotofácil
+Este programa em Java implementa um jogo de loteria simples chamado "Lotofácil". Os jogadores podem escolher entre três tipos diferentes de apostas: adivinhar um número aleatório, adivinhar uma letra ou apostar se um número é par ou ímpar. Abaixo está uma breve visão geral de cada opção:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Como Jogar
+Adivinhar o Número Aleatório:
 
-## Folder Structure
+Opção 1: Um jogador tenta adivinhar um número gerado aleatoriamente entre 0 e 100.
+Se o número adivinhado coincidir com o número gerado, o jogador ganha R$ 1.000. Caso contrário, perde.
+Adivinhar a Letra:
 
-The workspace contains two folders by default, where:
+Opção 2: Um jogador tenta adivinhar uma letra minúscula gerada aleatoriamente.
+Se a letra adivinhada coincidir com a letra gerada, o jogador ganha R$ 500. Caso contrário, perde.
+Par ou Ímpar:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Opção 3: Um jogador aposta se um número gerado aleatoriamente é par ou ímpar.
+Se a aposta do jogador coincidir com a paridade do número gerado, ele ganha R$ 100. Caso contrário, perde.
+Como Executar
+Para executar o programa, siga estas etapas:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Compile o arquivo Java usando um compilador Java.
+Execute o arquivo Java compilado usando uma Máquina Virtual Java (JVM).
+bash
+Copy code
+javac App.java
+java App
+Observação
+Certifique-se de ter o Java instalado em seu sistema para executar o programa.
+Divirta-se jogando Lotofácil! Boa sorte!
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+
