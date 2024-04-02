@@ -1,0 +1,38 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        Random PortaSorteada = new Random();
+        System.out.println("     ******************     ");
+        System.out.println("    -     Monty Hall     -");
+        System.out.println("-     Escolha sua porta:    -");
+        System.out.println("-     1) Primeira porta     -");
+        System.out.println("-     2) Segunda porta      -");
+        System.out.println("-     3) Terceira porta     -");
+        System.out.printf("     Digite sua escolha:");
+        int portaEscolhida = 0;
+        int portaVazia = -1;
+        int portaPremiada= 0;
+        String Resposta = "";
+        portaEscolhida = scn.nextInt();
+        if (portaEscolhida >= 1 && portaEscolhida <= 3) {
+            do{
+                 portaPremiada = PortaSorteada.nextInt(3)+ 1;
+            }while(portaVazia == portaPremiada || portaEscolhida == portaVazia );
+                    System.out.println("     ******************     ");
+                    System.out.println("   -     Monty Hall     -");
+                    System.out.println("     ******************     ");
+                    System.out.println("-     Você escolheu a porta "+ portaEscolhida + "    -");
+                    System.out.println("-   Gostaria de trocar de porta?s/n   -");
+                    Resposta = scn.next();
+            if(Resposta.equals("s")){
+                        System.out.println("Parabéns!! Você Ganhou!");}
+                    else{
+                            System.out.println("Que pena! A porta premiada era a porta: "+ portaPremiada);
+                        }
+            }else{
+            System.out.println("Opção inválida!");
+        }
+        }
+    }
