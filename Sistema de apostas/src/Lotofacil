@@ -3,69 +3,79 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-public class Lotofacil extends JFrame {
-    Random rand = new Random();
 
-    private JPanel painel = new JPanel();
-    private JButton jButtonAposta1= new JButton("Apostar de 0 a 100");
-    private JButton jButtonAposta2= new JButton("Apostar de A a Z");
-    private JButton jButtonAposta3= new JButton("Apostar em par ou impar");
+public class Lotofacil {
+    public static class Lotofacil extends JFrame {
 
-    public lotofacil(){
-        this.setTitle("** Lotofácil **");
-        this.setSize(400,300);
-        painel.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
-        painel.setBackground(new Color(255,255,255));
+        private JPanel painel = new JPanel();
+        private JButton jButtonAposta1 = new JButton("Apostar de 0 a 100");
+        private JButton jButtonAposta2 = new JButton("Apostar de A a Z");
+        private JButton jButtonAposta3 = new JButton("Apostar em par ou impar");
 
-        jButtonAposta1.addActionListerner(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {aposta1();}
-        });
-        jButtonAposta2.addActionListerner(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {aposta2();}
-        });
-        jButtonAposta3.addActionListerner(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {aposta3();}
-        });
-    }
-    private static void aposta1(){
-        Object num = JOptionPane.showInputDialog(null,"Digite um número de 0 a 100: ","Aposta 1", JOptionPane.INFORMATION_MESSAGE,null,"");
-        int numeroSorteado = rand.nextInt(100);
-        if(num == numeroSorteado){
-            JOptionPane.showMessageDialog(null,"Parabéns! Milzão no pix.", "Aposta 1", JOptionPane.INFORMATION_MESSAGE);
-        }else {JOptionPane.showMessageDialog(null."Que pena!Você perdeu. O número sorteado foi: "+numeroSorteado+".");
-    }
-    }
-        private static void aposta2(){
+        public void Lotofacil() {
+            this.setTitle("** Lotofácil **");
+            this.setSize(400, 300);
+            painel.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
+            painel.setBackground(new Color(255, 255, 255));
+
+            jButtonAposta1.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    aposta1();
+                }
+            });
+            jButtonAposta2.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    aposta2();
+                }
+            });
+            jButtonAposta3.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {/*aposta3();*/}
+            });
+        }
+
+        private static void aposta1() {
+            Random rand = new Random();
+
+            Object num = JOptionPane.showInputDialog(null, "Digite um número de 0 a 100: ", "Aposta 1", JOptionPane.INFORMATION_MESSAGE, null, null, "");
+            int numeroSorteado = rand.nextInt(100);
+            if (num.equals(numeroSorteado)) {
+                JOptionPane.showMessageDialog(null, "Parabéns! Milzão no pix.", "Aposta 1", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Que pena!Você perdeu. O número sorteado foi: " + numeroSorteado + ".");
+            }
+        }
+
+        private static void aposta2() {
             Random aleatorio = new Random();
             char letra = letra(aleatorio);
-            Object palpite = JOptionPane.showInputDialog(null, "Digite a letra: ","Aposta 2",JOptionPane.INFORMATION_MESSAGE,,null,"");
-            CLetra = letra(aleatorio);
-             if(palpite == letra){
-                JOptionPane.showMessageDialog("Você ganhou R$ 500,00 reais.");
-                        } else {
-                            JOptionPane.showMessageDialog(null,"Que pena! A letra sorteada foi: "+ letra + ".",JOptionPane.INFORMATION_MESSAGE;
-                        }
-                            letra = letra(aleatorio);
-             private static char letra(Random aleatorio) {
-            int Cletra = aleatorio.nextInt(26);
-            Cletra += (int) 'a';
-            return (char) Cletra;
-        }
-        }
-        private static void aposta3(){
-
-            Object aposta = JOptionPane.showInputDialog(null, "Digite a o número: ","Aposta 3",JOptionPane.INFORMATION_MESSAGE,,null,"");
-            if (aposta %2 == 0) {
-            JOptionPane.showMessageDialog(null,"Parabéns! cemzão no pix.", "Aposta 1", JOptionPane.INFORMATION_MESSAGE);
-                saldo += 100;
-            } else{
-                JOptionPane.showMessageDialog(null,"Que pena! A premiação era para números pares.",JOptionPane.INFORMATION_MESSAGE);
-
+            Object palpite = JOptionPane.showInputDialog(null, "Digite a letra: ", "Aposta 2", JOptionPane.INFORMATION_MESSAGE, null, null, "");
+            int CLetra = letra(aleatorio);
+            if (palpite.equals(letra)) {
+                JOptionPane.showMessageDialog(null, "Parabéns! quinhentão no pix.", "Aposta 1", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Que pena! A letra sorteada foi: " + letra + ".");
             }
 
-    }
+        }
 
+        private static char letra(Random aleatorio) {
+            int letra = aleatorio.nextInt(26);
+            letra += (int) 'a';
+            return (char) letra;
+
+        }
+      /* private static void aposta3(){
+            Object aposta = (int) JOptionPane.showInputDialog(null, "Digite a o número: ","Aposta 3",JOptionPane.INFORMATION_MESSAGE,null,null,"");
+           if (aposta % 2 == 0) {
+               JOptionPane.showMessageDialog(null,"Que pena! A premiação era para números pares.", "Aposta 3", JOptionPane.INFORMATION_MESSAGE);
+
+           } else {
+               JOptionPane.showMessageDialog(null,"Parabéns! cemzão no pix.", "Aposta 3", JOptionPane.INFORMATION_MESSAGE);
+           }*/
+
+    }
 }
+
