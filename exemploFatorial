@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.add(4);
+        array.add(5);
+        /*int resultado = somaArray(array, array.size() -1);*/
+        int resposta = elementoPresente(array, 3, array.size() -1);
+        System.out.println(resposta);    }
+    private static int elementoPresente(ArrayList<Integer> array, int elemento, int indice){
+        return (indice == 0)? 0: array.get(indice -1) == elemento? 1:elementoPresente(array, elemento, indice -1);
+    }
+    /**private static int somaArray(ArrayList<Integer> array, int indice){
+        return (indice == 0)? array.get(0): array.get(indice) + somaArray(array, indice -1);
+    }**/
+}
