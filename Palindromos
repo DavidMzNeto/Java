@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        String palavra = "ARARA";
+        int resultado = isPalindrome(palavra, 0,
+                palavra.length() - 1);
+        System.out.println("Resultado: " + resultado);
+    }
+
+
+    private static int isPalindrome(String palavra, int left, int right) {
+
+        //caso base
+        return (left >= right)? 1: (palavra.charAt(left) != palavra.charAt(right))? 0: isPalindrome(palavra, left + 1, right - 1);
+    }
+}
