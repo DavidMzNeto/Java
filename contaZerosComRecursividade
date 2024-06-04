@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int num= 1020340;
+        int resultado = contaZeros(num);
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("|     Resultado: "+ resultado +" zeros  |");
+        System.out.println("-------------------------------------------------------------");
+
+    }
+        private static int contaZeros(int num){
+        if(num==0){
+            return 0;
+        }
+        int ultimodigito= num % 10;
+        if (ultimodigito==0){
+        return 1+ contaZeros(num/10);
+        }else{
+         return contaZeros(num/10);}
+        }
+}
