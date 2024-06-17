@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="C:\Users\Pichau\Documents\Projetos\Peixaria\src\main\resources\static\Css\carrinho.css">
+</head>
+<body>
+    <header>
+        <span>Carrinho de Compras</span>
+    </header>
+    <main>
+        <div class="nav-item">
+            <a href="../paginasSite/paginaPrincipal.html" class="button"><button type="button">Voltar</button></a>
+        </div>
+        <div class="page-title">Seu Carrinho</div>
+        <div class="content">
+            <section>
+                <h1>Itens</h1>
+                <table> 
+                    <thead>
+                        <tr>
+                            <th>Produtos</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>-</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item : ${itensCarrinho}">
+                            <td>
+                                <div class="product">
+                                    <img th:src="@{https://picsum.photos/100/120}" alt="Imagem do produto">
+                                    <div class="info">
+                                        <div class="name" th:text="${item.produto.nome}">Nome do Produto</div>
+                                        <div class="categoria" th:text="${item.produto.categoria}">Categoria do Produto</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td th:text="${item.produto.preco}">R$ 0,00</td>
+                            <td>
+                                <div class="qty">
+                                    <button class="remove" id="remove">-</button>
+                                    <span th:text="${item.quantidade}">0</span>
+                                    <button class="add" id="add">+</button>
+                                </div>
+                            </td>
+                            <td th:text="${item.produto.preco * item.quantidade}">R$ 0,00</td>
+                            <td>
+                                <button class="delete" id="delete">x</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <aside>
+                <div class="box">  
+                    <header>Resumo da Compra</header>
+                    <div class="info">
+                        <div><span>Sub-Total</span><span th:text="${subTotal}">R$ 0,00</span></div>
+                        <div><span>Frete</span><span>Gratuito</span></div>
+                        <div><button>Adicionar cupom de desconto</button></div>
+                    </div>
+                </div>
+                <footer>
+                    <span>Total</span>
+                    <span th:text="${total}">R$ 0,00</span>
+                </footer>
+                <a href="paginaDeCompra.html"><button>Finalizar Compra</button></a>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="text-content">
+            <p>Informações adicionais e links relevantes.</p>
+            <p>Mais detalhes aqui.</p>
+            <p>Outras informações importantes.</p>
+        </div>
+        <div class="image-content">
+            <img src="/images/logomarca.jpeg" alt="Logomarca">
+        </div>
+    </footer>
+</body>
+</html>
