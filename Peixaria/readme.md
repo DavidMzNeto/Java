@@ -6,7 +6,7 @@ Contruir uma loja de peixes com cadastro, carrinho e validação de compra
 
 - Java 22
 - Spring Boot
-- PostgreeSQL
+- MySQL
 
 # #  Arquitetura
 O projeto foi desenvolvido usando a arquitetura MVC, além de usar o spring para criar as tabelas no banco de dados
