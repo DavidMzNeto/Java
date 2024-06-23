@@ -1,6 +1,6 @@
 # Peixaria do Neto - Loja virtual
 
-![Logo da Peixaria](file-KyGAMh3J7H3fp5t5gQ4QxcCv)
+![Logo da Peixaria](https://github.com/DavidMzNeto/Java/blob/main/Peixaria/README.md)
 
 Contruir uma loja de peixes com cadastro, carrinho e validação de compra
 
@@ -23,7 +23,7 @@ O projeto foi desenvolvido usando a arquitetura MVC, além de usar o Spring para
 5. Selecione a forma de pagamento.
 6. Conclua o pagamento.
 
-![Diagrama de Banco de Dados](file-md22il1MpP3xmzbDm77eXaKh)
+![Diagrama de Banco de Dados](https://github.com/DavidMzNeto/Java/edit/main/Peixaria/README.md)
 
 ## Dependências
 
