@@ -8,7 +8,7 @@ Contruir uma loja de peixes com cadastro, carrinho e validação de compra
 
 - Java 22
 - Spring Boot
-- MySQL
+- PostgreeSQL
 
 ## Arquitetura
 
