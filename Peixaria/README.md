@@ -1,6 +1,6 @@
 # Peixaria do Neto - Loja virtual
 
-<img width="100px" height="100px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/Imagens/logo.jpeg">
+<img width="300px" height="300px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/Imagens/logo.jpeg">
 
 Contruir uma loja de peixes com cadastro, carrinho e validação de compra
 
