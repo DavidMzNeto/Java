@@ -23,9 +23,9 @@ O projeto foi desenvolvido usando a arquitetura MVC, além de usar o Spring para
 5. Selecione a forma de pagamento.
 6. Conclua o pagamento.
 
-<img alt="app" width="500px" height="275px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/Imagens/a.jpeg">
+<img alt="app" width="500px" height="275px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/Imagens/a.jpeg"><img width="500px" height="275px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/20240623_202604.gif">
 
-<img width="500px" height="275px" src="https://github.com/DavidMzNeto/Java/blob/main/Peixaria/src/main/resources/static/20240623_202604.gif">
+
 
 ## Dependências
 
