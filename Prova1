@@ -1,0 +1,176 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String nome = "";
+        int voto = 0;
+        int opcao = -1;
+        ArrayList<Jogador> participante = new ArrayList<>();
+        Scanner scn = new Scanner(System.in);
+        do {
+            System.out.println("-------------------------");
+            System.out.println("-        Bem vindo      -");
+            System.out.println("-------------------------");
+            System.out.println("Escolha quem você gostaria de eliminar.");
+            System.out.println(" Para consultar o nome dos participantes digite 1");
+            System.out.println("Para votar digite 2");
+            System.out.println("Para sair digite 0");
+            System.out.println("Digite a opção escolhida");
+            opcao = scn.nextInt();
+            switch (opcao) {
+                case 1:
+                    System.out.println("Para sair digite 0.");
+                    System.out.println("1 -Alane Dias");
+                    System.out.println("2 -Beatriz Reis");
+                    System.out.println("3 -Davi Brito");
+                    System.out.println("4 -Deniziane Ferreira");
+                    System.out.println("5 -Fernanda Bandeira");
+                    System.out.println("6 -Giovanna Lima");
+                    System.out.println("7 -Giovanna Pitel");
+                    System.out.println("8 -Isabelle Nogueira");
+                    System.out.println("9 -Juninho");
+                    System.out.println("10 -Leidy Elin");
+                    System.out.println("11 -Lucas Henrique");
+                    System.out.println("12 -Lucas Luigi");
+                    System.out.println("13 -Lucas Pizane");
+                    System.out.println("14 -Marcus Vinicius");
+                    System.out.println("15 -Matteus Amaral");
+                    System.out.println("16 -Maycon Cosmer");
+                    System.out.println("17 -MC Bin Laden");
+                    System.out.println("18 -Michel Nogueira");
+                    System.out.println("19 -Nizam");
+                    System.out.println("20 -Raquele Cardozo");
+                    System.out.println("21 -Rodriguinho");
+                    System.out.println("22 -Thalyta Alves");
+                    System.out.println("23 -Vanessa Lopes");
+                    System.out.println("24 -Vinicius Rodrigues");
+                    System.out.println("25 -Wanessa Camargo");
+                    System.out.println("26 -Yasmin Brunet");
+                    break;
+                case 2:
+                    Votos(participante);
+                    break;
+                default:
+                    break;
+            }
+
+        } while (opcao != 0);
+        System.out.println(nome );
+    }
+
+    private static void Votos(ArrayList<Jogador> participante) {
+    Scanner scan = new Scanner(System.in);
+    int votos = 0;
+    String Nome = "";
+    System.out.println("Digite o número do participante");
+    votos = scan.nextInt();
+    Jogador objJogador = new Jogador(votos, Nome);
+    participante.add(objJogador);
+    if( votos == 1){
+        Nome = "Alane Dias";
+    }
+    else if( votos == 2){
+        Nome = "Beatriz Reis";
+
+    }
+    else if( votos == 3){
+        Nome = "Davi Brito";
+
+    }
+    else if( votos == 4){
+        Nome = "Deniziane Ferreira";
+
+    }
+    else if( votos == 5){
+        Nome = "Fernanda Bandeira";
+
+    }
+    else if( votos == 6){
+        Nome = "Giovanna Lima";
+
+    }
+    else if( votos == 7){
+        Nome = "Isabelle Nogueira";
+
+    }
+    else if( votos == 8){
+        Nome = "Isabelle Nogueira";
+
+    }
+    else if( votos == 9){
+        Nome = "Juninho";
+
+    }
+    else if( votos == 10){
+        Nome = "Leidy Elin";
+
+    }
+    else if( votos == 11){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 12){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 13){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 14){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 15){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 16){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 17){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 18){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 19){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 20){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 21){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 22){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 23){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 24){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 25){
+        Nome = "Alane Dias";
+
+    }
+    else if( votos == 26){
+        Nome = "Alane Dias";
+
+    }else{
+        System.out.println("Número inválido");
+    }
+    }
+}
