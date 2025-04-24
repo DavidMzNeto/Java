@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import com.prova.test.model.Jogador;
 import com.prova.test.service.JogadorService;
 
+@RestController
+@RequestMapping("/Jogador")
 public class JogadorController {
     // Implementação do controlador para Jogador
     
@@ -16,16 +18,24 @@ public class JogadorController {
     @Autowired
     private JogadorService jogadorService;
 
-    @GetMapping("/Jogador")
+    @GetMapping
     public List<Jogador> listAll() {
         return jogadorService.listAll();
     }
-    @GetMapping("/Jogador/{id}")
+    @GetMapping("/{id}")
     public Jogador findById(@PathVariable Long id) {
         return jogadorService.findById(id);
     }
-    @GetMapping
+    @PostMapping
     public Jogador BID(@RequestBody Jogador jogador) {
         return jogadorService.createJogador(jogador);
+    }
+    @PutMapping("/{id}")
+    public Jogador update(@RequestBody Jogador jogador, @PathVariable Long id) {
+        return jogadorService.updateJogador(jogador, id);
+    }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        jogadorService.delete(id);
     }
 }

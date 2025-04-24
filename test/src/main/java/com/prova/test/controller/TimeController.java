@@ -3,39 +3,39 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.prova.test.model.Time;
-import com.prova.test.service.TimeService;
+import com.prova.test.model.Team;
+import com.prova.test.service.TeamService;
 
 
 
 
 @RestController
-@RequestMapping("/Time")
+@RequestMapping("/Team")
 public class TimeController {
     
     @Autowired
-    private TimeService timeService;
+    private TeamService teamService;
 
     @GetMapping
-    public List<Time> listAll() {
-        return timeService.listAll();
+    public List<Team> listAll() {
+        return teamService.listAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Time> findById(@PathVariable Long id) {
-        return timeService.findById(id);
+    public Optional<Team> findById(@PathVariable Long id) {
+        return teamService.findById(id);
     }
     @PostMapping
-    public Time register(@RequestBody Time time) {
-        return timeService.register(time);
+    public Team register(@RequestBody Team time) {
+        return teamService.register(time);
     }
     @PutMapping("/{id}")
-    public Time update(@RequestBody Time time, @PathVariable Long id) {
-        return timeService.update(time, id);
+    public Team update(@RequestBody Team time, @PathVariable Long id) {
+        return teamService.update(time, id);
     }
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        timeService.delete(id);
+        teamService.delete(id);
     }
 }
 

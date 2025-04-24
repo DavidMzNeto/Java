@@ -1,6 +1,7 @@
  package com.prova.test.model;
 
-import java.sql.Time;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -17,6 +18,7 @@ import lombok.Data;
     private int Age;
     
     @ManyToOne
-    @JoinColumn(name = "time_id")
-    private Time time;
+    @JoinColumn(name = "team_id")
+    @JsonBackReference
+    private Team team;
 }

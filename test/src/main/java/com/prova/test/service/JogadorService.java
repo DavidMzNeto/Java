@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import com.prova.test.model.Jogador;
 import com.prova.test.repository.JogadorRepository;
@@ -34,13 +35,15 @@ public class JogadorService {
     public Jogador createJogador(Jogador jogador) {
         return jogadorRepository.save(jogador);
     }
-    public Jogador updateJogador(Long id, Jogador jogador) {
-        if (jogadorRepository.existsById(id)) {
-            jogador.setId(id);
+    public Jogador updateJogador(@Validated Jogador novoJogador, Long id) {
+        return jogadorRepository.findById(id).map(jogador -> {
+            jogador.setName(novoJogador.getName());
+            jogador.setAge(novoJogador.getAge());
             return jogadorRepository.save(jogador);
-        } else {
-            return null;
-        }
+        }).orElseThrow();
+    }
+    public void delete(Long id) {
+        jogadorRepository.deleteById(id);
     }
 
 
