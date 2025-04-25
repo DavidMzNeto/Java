@@ -10,13 +10,10 @@ Esta é uma aplicação web desenvolvida em **Spring Boot** no modelo **MVC**, c
 - Spring Boot
 - Spring Web
 - Spring Data JPA
-- Spring Data MongoDB
 - Spring Boot DevTools
 - Validation (Jakarta)
 - Lombok
-- H2 Database
 - MariaDB
-- MongoDB
 - Maven
 
 ---
