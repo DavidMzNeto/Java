@@ -53,7 +53,9 @@ Content-Type: application/json
   "descricao": "Revisar conteúdo de JPA e MongoDB",
   "status": "Em andamento"
 }
+```
 🔁 Atualizar uma Tarefa (PUT)
+```
 http
 Copiar
 Editar
@@ -65,13 +67,13 @@ Content-Type: application/json
   "descricao": "Revisar repositórios e perfis",
   "status": "Concluído"
 }
-🛠 Configuração dos Bancos de Dados
+
+```
+## 🛠 Configuração dos Bancos de Dados
 Você pode alternar entre os bancos de dados configurando o arquivo application.properties.
 
 Exemplo para H2
-properties
-Copiar
-Editar
+```
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
@@ -86,15 +88,13 @@ spring.datasource.url=jdbc:mariadb://localhost:3306/tarefasdb
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.database-platform=org.hibernate.dialect.MariaDBDialect
+```
 Exemplo para MongoDB
-properties
-Copiar
-Editar
+```
 spring.data.mongodb.uri=mongodb://localhost:27017/tarefasdb
+```
 ✅ Como Executar
-bash
-Copiar
-Editar
+
 # Clone o projeto
 git clone https://github.com/seu-usuario/seu-repo.git
 
