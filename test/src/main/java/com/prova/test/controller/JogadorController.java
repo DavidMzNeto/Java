@@ -31,9 +31,10 @@ public class JogadorController {
         return jogadorService.createJogador(jogador);
     }
     @PutMapping("/{id}")
-    public Jogador update(@RequestBody Jogador jogador, @PathVariable Long id) {
-        return jogadorService.updateJogador(jogador, id);
-    }
+    public ResponseEntity<Jogador> update(@RequestBody @Validated Jogador jogador, @PathVariable Long id) {
+    Jogador atualizado = jogadorService.updateJogador(jogador, id);
+    return ResponseEntity.ok(atualizado);
+}
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         jogadorService.delete(id);
